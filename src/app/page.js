@@ -94,15 +94,15 @@ export default function Home() {
                         className="border-2"
                     >
                       
-                        <ul className="artisan-card-top hover:bg-inherit text-2xl font-bold">
+                        <div className="artisan-card-top hover:bg-inherit text-2xl font-bold">
                         <Link href={`/artisan/${item.id}`}>
-                          <li><h5 className="text-3xl">{item.name}</h5></li>
+                          <h5 className="text-3xl">{item.name}</h5>
 
-                          <li>{item.category}</li>
-                          <li>{item.location}</li>
-                          <li>{item.note}</li>
+                          <p>{item.category}</p>
+                          <p>{item.location}</p>
+                          <p>{item.note}</p>
                           </Link>
-                        </ul>
+                        </div>
                       
               </div>
               

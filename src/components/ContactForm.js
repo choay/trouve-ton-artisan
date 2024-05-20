@@ -3,7 +3,7 @@ import React from 'react';
 const ContactForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Gérer la soumission du formulaire
+    
   };
 
   return (
