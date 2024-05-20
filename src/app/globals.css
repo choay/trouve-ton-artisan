@@ -1,0 +1,51 @@
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  /* styles/globals.css */
+@font-face {
+  font-family: 'Graphik';
+  src: url('/public/fonts/Graphik-Regular.woff') format('woff2');
+  font-weight: normal;
+  font-style: Regular;
+}
+
+
+/* Appliquer la police globalement */
+body {
+  font-family: 'Graphik', sans-serif;
+  color:#384050;
+}
+
+.navbar-nav{
+  background-color:#f1f8fc;
+}
+footer{
+  background-color:#0074c7;
+  color:#f1f8fc;
+}
+.reseaux-sociaux{
+  background-color:#f1f8fc;
+  color:#384050;
+}
+h1, h2, h3, h4, h5{
+  color:#00497c;
+  
+}
+.btn-search{
+  background-color:#0074c7;
+}
+.artisan-card{
+  background-color:#f1f8fc ;
+}
+.artisan-card-top{
+  background-color:#f1f8fc;
+}
+.btn{
+  background-color:#00497c;
+  color:#f1f8fc;
+}
+.btn:hover{
+  background-color:#0074c7 ;
+  color:#f1f8fc;
+}
