@@ -86,7 +86,7 @@ const NavBar = ({ onSearch }) => {
             </nav>
             {isSearchClick && (   
                     <div className='m-2'>
-                        <SearchForm />
+                        <SearchForm/>
                     </div>
             )}
             </>

@@ -27,9 +27,8 @@ const SearchForm = () => {
   }, []);
 
   useEffect(() => {
-    if (data.length === 0) return; // Ensure data is fetched before filtering
+    if (data.length === 0) return;
 
-    // Get search params from the URL
     const nameFromUrl = searchParams.get('name') || '';
     const specialtyFromUrl = searchParams.get('specialty') || '';
     const locationFromUrl = searchParams.get('location') || '';
@@ -74,15 +73,13 @@ const SearchForm = () => {
         <>
         <h2>Resultat</h2>
         <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 m-5 border-2'>
-          
-          
           <ul>
             {filteredData.map(artisan => (
               <li key={artisan.id}>
-                <h3>{artisan.name}</h3>
-                <p>Specialité: {artisan.specialty}</p>
-                <p>Localisation: {artisan.location}</p>
-                
+                <Link href={`/artisan/${artisan.id}`}><h3>{artisan.name}</h3>
+                  <p>Specialité: {artisan.specialty}</p>
+                  <p>Localisation: {artisan.location}</p>
+                </Link>
               </li>
             ))}
           </ul>

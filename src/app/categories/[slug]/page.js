@@ -15,24 +15,15 @@ const categories = async ({params}) => {
             
         {artisanProfile.map((item, index) => (
     item && ( 
-    <>
-        
+    <>    
         <Link href={`/artisan/${item.id}`}>
-            <div className="artisan-card  hover:bg-inherit col-span-3 md:col-span-1 gap-10 m-2 p-5 border-2 text-2xl">
+            <div className="artisan-card hover:bg-inherit col-span-3 md:col-span-1 gap-10 m-2 p-5 border-2 text-2xl">
                 <div 
-            
                     key={index}>
-                <h2 className="text-3xl">{item.name}</h2>
-            
-                    <p className="p-2">Specialité: {item.specialty}</p>
-            
-                
-                    <p className="p-2">Note: {item.note}</p>
-            
-            
+                <h2 className="text-3xl">{item.name}</h2>            
+                    <p className="p-2">Specialité: {item.specialty}</p>                            
+                    <p className="p-2">Note: {item.note}</p>  
                     <p className="p-2">localisation: {item.location}</p>
-            
-
                 </div>
             </div>
         </Link>

@@ -4,9 +4,7 @@ import datas from "/public/datas";
 import Link from "next/link";
 
 export default function Home() {
- 
-
-  
+   
   const top = true;
 
   return (
@@ -80,34 +78,25 @@ export default function Home() {
             </div>
           </div>
         </div>
-
         <h2 className="p-5 mt-20 flex lg:justify-end text-3xl">Les trois artisan du mois</h2>
-
-        <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 m-5'>
-            
+        <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 m-5'>   
             {datas.map(item => (
               (top===item.top)
-               && (
-                
+               && (    
                     <div
                         key={item.id}
                         className="border-2"
                     >
-                      
                         <div className="artisan-card-top hover:bg-inherit text-2xl font-bold">
                         <Link href={`/artisan/${item.id}`}>
                           <h5 className="text-3xl">{item.name}</h5>
-
                           <p>{item.category}</p>
                           <p>{item.location}</p>
                           <p>{item.note}</p>
                           </Link>
                         </div>
-                      
-              </div>
-              
+              </div> 
             )))}
-
         </div>
     </>
   );
